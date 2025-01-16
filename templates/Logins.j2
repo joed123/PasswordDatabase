@@ -1,0 +1,100 @@
+<h1>Logins</h1>
+[<a href="/">Generate Random Password</a> | <a href="Categories">Categories</a> | <a href="History">History</a>]
+<div id="browse" style="display: block">
+<p><strong>Browse All Logins</strong></p>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for username...">
+<table border="1" cellpadding="7" >
+<thead>
+<tr>
+    {% for key in Users[0].keys() %}
+
+    <th>{{ key }}</th>
+
+    {% endfor %}
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>
+<tbody>
+
+<!-- Now, iterate through every User -->
+{% for person in Users %}
+<tr>
+    <!-- Then iterate through every key in the current person dictionary -->
+    {% for key in person.keys() %}
+
+    <!-- Create a <td> element with the value of that key in it -->
+    <td>{{person[key]}}</td>
+    {% endfor %}
+    <td><a href="/edit_Login/{{Users[0].user_id}}" method = "post">Edit</a></td>
+    <td><a href="/delete_Login/{{Users[0].user_id}}" method = "post">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addLogin" action="/Logins" method ="POST">
+        <legend><strong>Add Login</strong></legend>
+          <fieldset class="fields">
+
+            <label> Email </label> 
+            <input type="text" class="form-control" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="" required>
+
+            <label> Username </label> 
+            <input type="text" class="form-control" id="username" name="username" "[A-Za-z]{1,}" placeholder="" required>
+
+          </fieldset>
+
+          <input class = "btn" type="submit" name="add_User">
+          <input class="btn" type="button" value="Cancel">
+	</form> <!--add login-->
+</div><!-- insert -->
+
+<div id="edit" style="display: block">
+  <form id="editLogin">
+      <legend><strong>Update Login</strong></legend>
+          <fieldset class="fields">
+            <label>Current Username</label> <input type="text" placeholder="" readonly>
+            <label>Current Email</label> <input type="text"  placeholder="" readonly>
+            <label>New Username</label> <input type="text" name="username" value="RnBListener07">
+            <label>New Email</label> <input type="text"  name="email" value="NeoSoul@mail.com">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveLogin" value="Save Update Login">
+          <input class="btn" type="button" value="Cancel" >
+  </form>
+
+
+
+
+
+
+</div><!-- update -->
+<div id="search" style="display: block">
+  <form id="updateLogin">
+      <legend><strong>Search Login</strong></legend>
+          <fieldset class="fields">
+            <label>Username</label> <input type="text" value="BestProgrammer123" readonly>
+    </fieldset>
+    <input class="btn" type="submit" id="SearchLogin" value="Search">
+          <input class="btn" type="button" value="Cancel" >
+  </form>
+
+</div><!-- search -->
+
+<div id="delete" style="display: block">
+  <form id="deleteLogin">
+      <legend><strong>Delete Login</strong></legend>
+    <fieldset class="fields">
+          <p>Are you sure you wish to delete the following login?</p>
+          <label>ID:</label> 102
+          <label>Website: </label> www.myplate.gov
+            <label>Username: </label> WatermelonMango
+            <label>Email: </label> WhatEvenIsFruit@mail.com 
+    </fieldset>
+    <input class="btn" type="submit" id="Delete" value="Delete">
+          <input class="btn" type="button" value="Cancel" >
+  </form> 
+</div><!-- delete -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Password</title>
+</head>
+<body>
+  <h1>Generate</h1>
+  [ <a href="Logins">Logins</a> | <a href="Categories">Categories</a> | <a href="History">History</a> ]
+  <p>&nbsp;</p>
+  <div>
+    <form action="/Generate" method="post">
+      <table border="1" cellpadding="7">
+        <tr>
+          <th>Uppercase</th>
+          <th>Lowercase</th>
+          <th>Digits</th>
+          <th>SpecialCharacters</th>
+          <th>Length</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="uppercase" checked/></td>
+          <td><input type="checkbox" name="lowercase" checked/></td>
+          <td><input type="checkbox" name="digits" checked/></td>
+          <td><input type="checkbox" name="specialchar" /></td>
+          <td><input type="input" name="length" value="8"/></td>
+        </tr>
+      </table>
+      <input class="btn" type="submit" id="generate" value="Generate">
+    </form>
+    <label>Password: {{ password_value }}</label>
+  </div>
+</body>

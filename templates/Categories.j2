@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <title>Categories</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Categories</h1>
+  [<a href="/">Generate Password</a> | <a href="Logins">Logins</a> | <a href="History">History</a>]
+  <div id="browse" style="display: block">
+    <p><strong>Categories</strong></p>
+<table border="1" cellpadding="7" >
+<thead>
+<tr>
+    {% for key in Password_Categories[0].keys() %}
+
+    <th>{{ key }}</th>
+
+    {% endfor %}
+    <th>Edit</th>
+    <th>Delete</th>
+{% for cat in Password_Categories %}
+</tr>
+  {% for key in cat.keys() %}
+    <td>{{ cat[key]}}</td>
+    {% endfor %}
+    <td><a href="/edit_Category/{{Password_Categories[0].category_id}}" method = "POST"</a>Edit</td>
+    <td><a href="/delete_Category/{{Password_Categories[0].category_id}}" method = "POST"</a>Delete</td>
+{% endfor %}
+</table>
+      <p>&nbsp;</p>
+    </div>
+    <div id="viewCats" style="display: block">
+      <p><strong>Music</strong></p>
+      <table border="1" cellpadding="7">
+        <tr>
+          <th>Website</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+          <td align="middle">spotify.com</td>
+          <td align="middle">RnBListener</td>
+          <td align="middle">SlowJamz22@mail.com</td>
+        </tr>
+        <tr>
+          <td align="middle">beta.apple.music.com</td>
+          <td align="middle">RnBListener</td>
+          <td align="middle">SlowJamz22@mail.com</td>
+        </tr>
+        <tr>
+          <td align="middle">soundcloud.com</td>
+          <td align="middle">RnBListener</td>
+          <td align="middle">SlowJamz22@mail.com</td>
+        </tr>
+      </table>
+      </form> <!--add category-->
+    </div><!-- insert -->
+    <p>&nbsp;</p>
+  </div> <!-- browse -->
+  <div id="insert" style="display: block">
+    <form id="addCategory">
+      <legend><strong>Add Category</strong></legend>
+      <fieldset class="fields">
+        <label> Name </label> <input type="text" name="category">
+      </fieldset>
+      <input class="btn" type="submit" id="add_Category" value="Add Category">
+      <input class="btn" type="button" value="Cancel">
+    </form> <!--add category-->
+  </div><!-- insert -->
+  <p>&nbsp;</p>
+  </div> <!-- browse -->
+  <p>&nbsp;</p>
+  <div id="updateCat" style="display: block">
+    <form id="updateCategory">
+      <legend><strong>Update Category</strong></legend>
+      <fieldset class="fields">
+        <label>Current Name</label> <input type="text" value="Music" readonly>
+        <label>New Name</label> <input type="text" value="">
+      </fieldset>
+      <input class="btn" type="submit" id="UpdateSaveCategory" value="Save Update Category">
+      <input class="btn" type="button" value="Cancel">
+    </form>
+  </div><!-- update -->
+  <p>&nbsp;</p>
+  <div id="deleteCat" style="display: block">
+    <form id="deleteCategory">
+      <legend><strong>Delete Category</strong></legend>
+      <fieldset class="fields">
+        <p>Are you sure you wish to delete the following Category?</p>
+        <label>Category: </label> Educational
+
+      </fieldset>
+      <input class="btn" type="submit" id="deleteCat" value="Delete">
+      <input class="btn" type="button" value="Cancel">
+    </form>
+  </div><!-- delete -->
+</body>
+
+</html>
+
