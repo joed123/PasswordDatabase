@@ -13,3 +13,4 @@ management team decided to develop an internal tool for generating passwords.
 <img width="884" alt="Screenshot 2025-01-16 at 2 54 50 AM" src="https://github.com/user-attachments/assets/37c2b116-bd9a-4005-84f3-bda64bb3f184" />
 <img width="884" alt="Screenshot 2025-01-16 at 2 55 11 AM" src="https://github.com/user-attachments/assets/1d5aa04a-64f6-4a0e-86af-5d5c78d763bf" />
 <img width="937" alt="Screenshot 2025-01-16 at 2 53 23 AM" src="https://github.com/user-attachments/assets/0f64638b-515b-4f60-b0ec-83d8b6833080" />
+<img width="843" alt="Screenshot 2025-01-16 at 2 56 55 AM" src="https://github.com/user-attachments/assets/8796c939-50cc-4349-b57c-5ed9ccc84588" />
