@@ -32,7 +32,7 @@ Example run:
 
 <img width="915" alt="Screenshot 2025-01-19 at 10 36 12 PM" src="https://github.com/user-attachments/assets/af500597-d6b2-4701-928c-0ba6cd079f44" />
 <img width="915" alt="Screenshot 2025-01-19 at 10 36 36 PM" src="https://github.com/user-attachments/assets/f2e62f14-702f-43b3-967a-ef58dee94608" />
-<img width="915" alt="Screenshot 2025-01-19 at 10 36 57 PM" src="https://github.com/user-attachments/assets/9876d810-735a-4088-8f0f-ba70cf5e8df1" />
+<img width="906" alt="Screenshot 2025-01-20 at 12 18 44 AM" src="https://github.com/user-attachments/assets/b8299519-08bb-4b19-9f80-1ec3091154ee" />
 <img width="915" alt="Screenshot 2025-01-19 at 10 39 25 PM" src="https://github.com/user-attachments/assets/5df7fd8e-fd40-499b-a819-2a50dd71d51e" />
 <img width="915" alt="Screenshot 2025-01-19 at 10 39 39 PM" src="https://github.com/user-attachments/assets/e237cab4-39ea-4174-806e-4ea6735f700a" />
 <img width="915" alt="Screenshot 2025-01-19 at 10 39 50 PM" src="https://github.com/user-attachments/assets/3c2230a0-83d3-4fd6-923c-c337baba0a4c" />
