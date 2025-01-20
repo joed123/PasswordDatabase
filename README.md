@@ -9,6 +9,8 @@ To run this program:
 7. mysql -u root -p securepassDB < database/DDL.sql
 8. python3 app.py
 
+
+
 Problem Statement:
 
 A small biotech company discovered a security breach that occurred over the weekend.
@@ -21,6 +23,8 @@ typically maintains around 100 passwords. Accounting for 100 employees and the a
 100 passwords, the database would have to handle 100,000+ entries. Recognizing that the
 increased complexity demanded by the new standards would be difficult to remember, the
 management team decided to develop an internal tool for generating passwords.
+
+
 
 
 Example run:
@@ -37,6 +41,10 @@ Example run:
 <img width="963" alt="Screenshot 2025-01-19 at 8 02 50 PM" src="https://github.com/user-attachments/assets/d57862d3-7161-41a7-a252-72cf2d8c289d" />
 
 
+
+
+
+
 Some of the Database Tables:
 
 
@@ -45,6 +53,9 @@ Some of the Database Tables:
 <img width="530" alt="Screenshot 2025-01-19 at 8 09 58 PM" src="https://github.com/user-attachments/assets/71660d62-7032-4042-aa59-e8e36fe33184" />
 <img width="417" alt="Screenshot 2025-01-19 at 8 13 01 PM" src="https://github.com/user-attachments/assets/0b4bf7e9-07f4-415d-afa7-065fcdf7ba5a" />
 <img width="517" alt="Screenshot 2025-01-19 at 8 13 10 PM" src="https://github.com/user-attachments/assets/4c5bed22-844e-45cf-8a70-0bc44cdf79f7" />
+
+
+
 
 
 Values and Schema:
