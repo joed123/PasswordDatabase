@@ -58,7 +58,7 @@ Some of the Database Tables:
 
 
 
-Key, ERD, and Schema:
+Key and ERD:
 
 
 <img width="897" alt="Screenshot 2025-01-16 at 2 54 10 AM" src="https://github.com/user-attachments/assets/06f2a361-f502-49aa-ad5b-a70c0bf38573" />
