@@ -1,4 +1,7 @@
+A scalable database for password management, supporting over 100,000 entries. It includes account management (add, delete, search), customizable password generation, password history tracking, and categorization for easy organization.
+
 To run:
+
 1. python3 -m venv venv
 2. source venv/bin/activate
 3. Install pip, if you do not have it
