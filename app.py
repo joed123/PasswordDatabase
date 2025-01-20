@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 from flask import request
 import os
 from database import db_connector as db
-import random
+from gen import generate_password
 import string
 
 app = Flask(__name__)
@@ -13,27 +13,9 @@ db_connection = db.connect_to_database()
 mysql = MySQL(app)
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = ""
+app.config["MYSQL_PASSWORD"] = "0067"
 app.config["MYSQL_DB"] = "securepassDB"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
-# Routes
-
-
-def generate_password(uppercase, lowercase, digits, specialchar, length):
-    character_pool = ""
-    if uppercase:
-        character_pool += string.ascii_uppercase
-    if lowercase:
-        character_pool += string.ascii_lowercase
-    if digits:
-        character_pool += string.digits
-    if specialchar:
-        character_pool += string.punctuation
-
-    if not character_pool:  
-        return "No characters selected"
-
-    return "".join(random.choice(character_pool) for _ in range(length))
 
 
 @app.route('/')
@@ -184,17 +166,41 @@ def delete_category():
 @app.route('/Generate', methods=["POST", "GET"])
 def generate():
     password_value = ""
+    message = None
+
     if request.method == "POST":
+        username = request.form.get("username")
         uppercase = 'uppercase' in request.form
         lowercase = 'lowercase' in request.form
         digits = 'digits' in request.form
         specialchar = 'specialchar' in request.form
         length = int(request.form.get('length', 8))
 
-        password_value = generate_password(uppercase, lowercase, digits, specialchar, length)
-        print(f"Generated Password: {password_value}")
+        query = "SELECT user_id FROM Users WHERE username = %s"
+        cur = mysql.connection.cursor()
+        cur.execute(query, (username,))
+        user = cur.fetchone()
 
-    return render_template("generate.j2", password_value=password_value)
+        if user:
+            user_id = user["user_id"]
+
+            query = "SELECT password_value FROM Passwords WHERE FK_user_id = %s"
+            cur.execute(query, (user_id,))
+            result = cur.fetchone()
+
+            if result:
+                password_value = result["password_value"]
+            else:
+                password_value = generate_password(uppercase, lowercase, digits, specialchar, length)
+                insert_query = "INSERT INTO Passwords (password_value, created_at, FK_user_id) VALUES (%s, CURDATE(), %s)"
+                cur.execute(insert_query, (password_value, user_id))
+                mysql.connection.commit()
+        else:
+            message = "Please create a user first."
+
+    return render_template("generate.j2", password_value=password_value, message=message)
+
+
 
 
 if __name__ == "__main__":

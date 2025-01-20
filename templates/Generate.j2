@@ -15,25 +15,28 @@
   <p>&nbsp;</p>
   <div>
     <form action="/Generate" method="post">
-      <table border="1" cellpadding="7">
-        <tr>
-          <th>Uppercase</th>
-          <th>Lowercase</th>
-          <th>Digits</th>
-          <th>SpecialCharacters</th>
-          <th>Length</th>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="uppercase" checked/></td>
-          <td><input type="checkbox" name="lowercase" checked/></td>
-          <td><input type="checkbox" name="digits" checked/></td>
-          <td><input type="checkbox" name="specialchar" /></td>
-          <td><input type="number" name="length" value="8" min="1" required/></td>
-        </tr>
-      </table>
-      <input class="btn" type="submit" id="generate" value="Generate">
-    </form>
-    <p><strong>Password:</strong> {{ password_value }}</p>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required />
+  <table border="1" cellpadding="7">
+    <tr>
+      <th>Uppercase</th>
+      <th>Lowercase</th>
+      <th>Digits</th>
+      <th>Special Characters</th>
+      <th>Length</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="uppercase" checked /></td>
+      <td><input type="checkbox" name="lowercase" checked /></td>
+      <td><input type="checkbox" name="digits" checked /></td>
+      <td><input type="checkbox" name="specialchar" /></td>
+      <td><input type="number" name="length" value="8" min="1" required /></td>
+    </tr>
+  </table>
+  <input class="btn" type="submit" id="generate" value="Generate" />
+</form>
+<p><strong>Password:</strong> {{ password_value }}</p>
+<p style="color:red;">{{ message }}</p>
   </div>
 </body>
 </html>
