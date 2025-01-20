@@ -5,7 +5,7 @@ To run this program:
 4. mysql -u root -p
 5. (Enter a password)
 6. CREATE DATABASE securepassDB;
-7. cntrl+D
+7. ctrl + d
 7. mysql -u root -p securepassDB < database/DDL.sql
 8. python3 app.py
 
