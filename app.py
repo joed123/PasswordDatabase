@@ -13,7 +13,7 @@ db_connection = db.connect_to_database()
 mysql = MySQL(app)
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = "0067"
+app.config["MYSQL_PASSWORD"] = ""
 app.config["MYSQL_DB"] = "securepassDB"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 # Routes
