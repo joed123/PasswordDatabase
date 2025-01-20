@@ -26,6 +26,7 @@ management team decided to develop an internal tool for generating passwords.
 
 
 A password can only be created if the user already exists.
+
 Example run:
 
 
