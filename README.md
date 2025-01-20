@@ -1,7 +1,7 @@
 To run this program:
 1. python3 -m venv venv
 2. source venv/bin/activate
-3. Install pip if you do not have it
+3. Install pip, if you do not have it
 4. pip install -r requirements.txt 
 5. mysql -u root -p
 6. (Enter a password)
