@@ -1,4 +1,4 @@
 host = 'localhost'
 user = 'root'
-passwd = '0067'
+passwd = ''
 db = 'securepassDB'
