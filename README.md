@@ -9,6 +9,17 @@ typically maintains around 100 passwords. Accounting for 100 employees and the a
 increased complexity demanded by the new standards would be difficult to remember, the
 management team decided to develop an internal tool for generating passwords.
 
+To run this program:
+1. python3 -m venv venv
+2. source venv/bin/activate
+3. pip install -r requirements.txt 
+4. mysql -u root -p
+5. (Enter a password)
+6. CREATE DATABASE securepassDB;
+7. cntrl+D
+7. mysql -u root -p securepassDB < database/DDL.sql
+8. python3 app.py
+
 <img width="897" alt="Screenshot 2025-01-16 at 2 54 10 AM" src="https://github.com/user-attachments/assets/06f2a361-f502-49aa-ad5b-a70c0bf38573" />
 <img width="884" alt="Screenshot 2025-01-16 at 2 54 50 AM" src="https://github.com/user-attachments/assets/37c2b116-bd9a-4005-84f3-bda64bb3f184" />
 <img width="884" alt="Screenshot 2025-01-16 at 2 55 11 AM" src="https://github.com/user-attachments/assets/1d5aa04a-64f6-4a0e-86af-5d5c78d763bf" />

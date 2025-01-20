@@ -30,7 +30,7 @@ def generate_password(uppercase, lowercase, digits, specialchar, length):
     if specialchar:
         character_pool += string.punctuation
 
-    if not character_pool:  # If no checkbox is selected
+    if not character_pool:  
         return "No characters selected"
 
     return "".join(random.choice(character_pool) for _ in range(length))
@@ -44,25 +44,18 @@ def root():
 @app.route("/search_Login", methods=["POST", "GET"])
 def search_login():
     if request.method == "POST":
-        # Retrieve the search term from the form
         username = request.form.get("username")
         
-        # Check if a username was provided
         if username:
-            # Query the database for the username
             query = "SELECT * FROM Users WHERE username LIKE %s"
             cur = mysql.connection.cursor()
-            cur.execute(query, (f"%{username}%",))  # Use LIKE for partial matches
+            cur.execute(query, (f"%{username}%",))
             results = cur.fetchall()
-            
-            # If no results, show a message
+    
             if not results:
                 return render_template("searchResults.j2", results=None, message="No matching users found.")
-            
-            # Return the search results
             return render_template("searchResults.j2", results=results, message=None)
     
-    # Default to a search form if the method is GET
     return render_template("searchLogin.j2")
 
 
@@ -90,7 +83,6 @@ def Users():
 @app.route("/delete_Login", methods=["POST", "GET"])
 def delete_user():
     if request.method == "POST":
-        # Get the username from the form
         username = request.form.get("username")
         
         if not username:  # Check if username is empty
@@ -106,9 +98,8 @@ def delete_user():
         if cur.rowcount == 0:
             return render_template("logins.j2", message="No user found with that username.", Users=[])
         
-        return redirect("/Logins")  # Redirect to the logins page after deletion
+        return redirect("/Logins")
     
-    # If the request is GET, return the delete form
     return render_template("deleteLogin.j2")
 
 @app.route('/Categories', methods=["POST", "GET"])
@@ -118,7 +109,6 @@ def categories():
             category_name = request.form.get("category_name")
             
             if category_name:
-                # Fetch a valid password_id from the passwords table
                 cur = mysql.connection.cursor()
                 cur.execute("SELECT password_id FROM passwords LIMIT 1;")
                 result = cur.fetchone()
@@ -152,48 +142,42 @@ def categories():
 
 @app.route("/edit_Category/<int:id>", methods=["POST", "GET"])
 def edit_category(id):
-    # GET method - fetch category by ID
     if request.method == "GET":
         query = "SELECT * FROM Password_Categories WHERE category_id = %s"
         cur = mysql.connection.cursor()
-        cur.execute(query, (id,))  # Pass the correct category_id here
+        cur.execute(query, (id,))
         category = cur.fetchone()
         
-        if category:  # Ensure the category exists
+        if category:
             return render_template("editCategory.j2", category=category)
         else:
-            return "Categoryn found", 404  # Return an error if category doesn't exist
+            return "Categoryn found", 404
 
-    # POST method - update the category
     if request.method == "POST":
-        category_name = request.form["category_name"]  # New name for the category
+        category_name = request.form["category_name"]
         query = "UPDATE Password_Categories SET category_name = %s WHERE category_id = %s"
         cur = mysql.connection.cursor()
-        cur.execute(query, (category_name, id))  # Ensure the correct category_id is passed here
+        cur.execute(query, (category_name, id))
         mysql.connection.commit()
         return redirect("/Categories")
 
 
-# Delete Category Route
 @app.route("/delete_Category", methods=["POST"])
 def delete_category():
     if request.method == "POST":
-        category_name = request.form.get("category_name")  # Retrieve the category name from the form
+        category_name = request.form.get("category_name")
         
-        if not category_name:  # Check if no input was provided
+        if not category_name:
             return render_template("Categories.j2", message="Please provide a category name to delete.", Password_Categories=[])
 
-        # Delete the category based on its name
         query = "DELETE FROM Password_Categories WHERE category_name = %s"
         cur = mysql.connection.cursor()
         cur.execute(query, (category_name,))
         mysql.connection.commit()
         
-        # If no rows were deleted, show an error
         if cur.rowcount == 0:
             return render_template("Categories.j2", message="No category found with that name.", Password_Categories=[])
         
-        # Redirect to the categories page
         return redirect("/Categories")
 
 
@@ -201,26 +185,20 @@ def delete_category():
 def generate():
     password_value = ""
     if request.method == "POST":
-        # Retrieve form data
         uppercase = 'uppercase' in request.form
         lowercase = 'lowercase' in request.form
         digits = 'digits' in request.form
         specialchar = 'specialchar' in request.form
         length = int(request.form.get('length', 8))
 
-        # Generate password
         password_value = generate_password(uppercase, lowercase, digits, specialchar, length)
-        print(f"Generated Password: {password_value}")  # Debugging
+        print(f"Generated Password: {password_value}")
 
-    # Render the page with the generated password
     return render_template("generate.j2", password_value=password_value)
 
 
-
-# Listener
 if __name__ == "__main__":
 
-    #Start the app on port 3000, it will be different once hosted
     port = int(os.environ.get('PORT', 13154))
     app.run(port=port, debug=True)
     

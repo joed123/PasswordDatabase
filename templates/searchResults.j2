@@ -15,8 +15,6 @@
                 <th>Email</th>
                 <th>Username</th>
                 <th>Last Login Date</th>
-                <th>Edit</th>
-                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -26,8 +24,6 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.username }}</td>
                 <td>{{ user.last_login_date or 'N/A' }}</td>
-                <td><a href="/edit_Login/{{ user.user_id }}">Edit</a></td>
-                <td><a href="/delete_Login/{{ user.user_id }}">Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>
