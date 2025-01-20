@@ -53,6 +53,8 @@ Some of the Database Tables:
 <img width="530" alt="Screenshot 2025-01-19 at 8 09 58 PM" src="https://github.com/user-attachments/assets/71660d62-7032-4042-aa59-e8e36fe33184" />
 <img width="417" alt="Screenshot 2025-01-19 at 8 13 01 PM" src="https://github.com/user-attachments/assets/0b4bf7e9-07f4-415d-afa7-065fcdf7ba5a" />
 <img width="517" alt="Screenshot 2025-01-19 at 8 13 10 PM" src="https://github.com/user-attachments/assets/4c5bed22-844e-45cf-8a70-0bc44cdf79f7" />
+<img width="524" alt="Screenshot 2025-01-19 at 8 42 21 PM" src="https://github.com/user-attachments/assets/82589863-109e-4cef-9e7c-52631f34ee25" />
+<img width="354" alt="Screenshot 2025-01-19 at 8 41 51 PM" src="https://github.com/user-attachments/assets/8b7f38ea-9760-4947-8c71-e4d39a5db0b6" />
 
 
 
