@@ -26,7 +26,7 @@ management team decided to develop an internal tool for generating passwords.
 
 
 
-
+A password can only be created if the user already exists.
 Example run:
 
 
@@ -46,27 +46,15 @@ Example run:
 
 
 
-
-
-
-
-
-
-
-
 Some of the Database Tables:
 
-
-<img width="253" alt="Screenshot 2025-01-19 at 8 08 34 PM" src="https://github.com/user-attachments/assets/87a30098-3823-455e-9ff0-fd42b09dd693" />
-<img width="529" alt="Screenshot 2025-01-19 at 8 12 32 PM" src="https://github.com/user-attachments/assets/1b67dd90-86f6-462e-a7cd-78267fea3af4" />
-<img width="530" alt="Screenshot 2025-01-19 at 8 09 58 PM" src="https://github.com/user-attachments/assets/71660d62-7032-4042-aa59-e8e36fe33184" />
-<img width="524" alt="Screenshot 2025-01-19 at 8 42 21 PM" src="https://github.com/user-attachments/assets/82589863-109e-4cef-9e7c-52631f34ee25" />
-<img width="417" alt="Screenshot 2025-01-19 at 8 13 01 PM" src="https://github.com/user-attachments/assets/0b4bf7e9-07f4-415d-afa7-065fcdf7ba5a" />
-<img width="517" alt="Screenshot 2025-01-19 at 8 13 10 PM" src="https://github.com/user-attachments/assets/4c5bed22-844e-45cf-8a70-0bc44cdf79f7" />
-<img width="354" alt="Screenshot 2025-01-19 at 8 41 51 PM" src="https://github.com/user-attachments/assets/8b7f38ea-9760-4947-8c71-e4d39a5db0b6" />
-
-
-
+<img width="245" alt="Screenshot 2025-01-19 at 10 47 48 PM" src="https://github.com/user-attachments/assets/95e13afa-6245-4e61-959a-0eb6013f8dd3" />
+<img width="538" alt="Screenshot 2025-01-19 at 10 45 52 PM" src="https://github.com/user-attachments/assets/ab058950-d09a-4f65-980f-45514640c0d2" />
+<img width="538" alt="Screenshot 2025-01-19 at 10 46 16 PM" src="https://github.com/user-attachments/assets/7f5c52ce-1359-4462-b3ae-000fc24de0af" />
+<img width="538" alt="Screenshot 2025-01-19 at 10 46 41 PM" src="https://github.com/user-attachments/assets/4855b7d1-f737-4000-b687-98ea768c2d55" />
+<img width="423" alt="Screenshot 2025-01-19 at 10 48 24 PM" src="https://github.com/user-attachments/assets/686483b8-5227-4b47-b183-ed43c48032fd" />
+<img width="488" alt="Screenshot 2025-01-19 at 10 48 49 PM" src="https://github.com/user-attachments/assets/a979b269-d32d-485c-9661-963349944746" />
+<img width="488" alt="Screenshot 2025-01-19 at 10 49 08 PM" src="https://github.com/user-attachments/assets/cb62ae03-0ccd-4024-af39-62fa26a877fb" />
 
 
 
