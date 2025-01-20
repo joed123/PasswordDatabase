@@ -1,4 +1,4 @@
-To run this program:
+To run:
 1. python3 -m venv venv
 2. source venv/bin/activate
 3. Install pip, if you do not have it
@@ -11,7 +11,7 @@ To run this program:
 10. python3 app.py
 
 
-Problem Statement:
+Problem:
 
 A small biotech company discovered a security breach that occurred over the weekend.
 Following an investigation, it was found that the backup sample chamber was exposed due to a
