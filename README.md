@@ -1,14 +1,14 @@
 To run this program:
 1. python3 -m venv venv
 2. source venv/bin/activate
-3. pip install -r requirements.txt 
-4. mysql -u root -p
-5. (Enter a password)
-6. CREATE DATABASE securepassDB;
-7. ctrl + d
-7. mysql -u root -p securepassDB < database/DDL.sql
-8. python3 app.py
-
+3. Install pip if you do not have it
+4. pip install -r requirements.txt 
+5. mysql -u root -p
+6. (Enter a password)
+7. CREATE DATABASE securepassDB;
+8. ctrl + d
+9. mysql -u root -p securepassDB < database/DDL.sql
+10. python3 app.py
 
 
 Problem Statement:
@@ -23,7 +23,6 @@ typically maintains around 100 passwords. Accounting for 100 employees and the a
 100 passwords, the database would have to handle 100,000+ entries. Recognizing that the
 increased complexity demanded by the new standards would be difficult to remember, the
 management team decided to develop an internal tool for generating passwords.
-
 
 
 A password can only be created if the user already exists.
