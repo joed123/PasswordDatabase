@@ -46,7 +46,7 @@ Some of the Database Tables:
 <img width="517" alt="Screenshot 2025-01-19 at 8 13 10 PM" src="https://github.com/user-attachments/assets/4c5bed22-844e-45cf-8a70-0bc44cdf79f7" />
 
 
-Schema:
+Values and Schema:
 
 
 <img width="897" alt="Screenshot 2025-01-16 at 2 54 10 AM" src="https://github.com/user-attachments/assets/06f2a361-f502-49aa-ad5b-a70c0bf38573" />
