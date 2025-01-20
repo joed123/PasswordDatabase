@@ -30,15 +30,24 @@ management team decided to develop an internal tool for generating passwords.
 Example run:
 
 
-<img width="880" alt="Screenshot 2025-01-19 at 8 00 03 PM" src="https://github.com/user-attachments/assets/fe3a9cb2-6d30-4ebf-bc7a-90c2cc9346f8" />
-<img width="983" alt="Screenshot 2025-01-19 at 8 00 44 PM" src="https://github.com/user-attachments/assets/76e0a693-2d30-47e5-844b-5e9f2528d323" />
-<img width="983" alt="Screenshot 2025-01-19 at 8 01 00 PM" src="https://github.com/user-attachments/assets/2431ed6a-c629-4c95-8c87-3cc59899c968" />
-<img width="794" alt="Screenshot 2025-01-19 at 8 01 30 PM" src="https://github.com/user-attachments/assets/29dafdf8-9092-4e60-8844-41235c21219a" />
-<img width="963" alt="Screenshot 2025-01-19 at 8 01 48 PM" src="https://github.com/user-attachments/assets/5f11e6a3-22be-49af-adce-34da6085d243" />
-<img width="963" alt="Screenshot 2025-01-19 at 8 02 00 PM" src="https://github.com/user-attachments/assets/4420dbeb-c574-400f-a042-6d9151267f13" />
-<img width="963" alt="Screenshot 2025-01-19 at 8 02 24 PM" src="https://github.com/user-attachments/assets/99c19072-fe62-4c93-b1a9-16a379f8a2a5" />
-<img width="963" alt="Screenshot 2025-01-19 at 8 02 43 PM" src="https://github.com/user-attachments/assets/a721bccb-ff3c-4921-b453-51a630f09afb" />
-<img width="963" alt="Screenshot 2025-01-19 at 8 02 50 PM" src="https://github.com/user-attachments/assets/d57862d3-7161-41a7-a252-72cf2d8c289d" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 36 12 PM" src="https://github.com/user-attachments/assets/af500597-d6b2-4701-928c-0ba6cd079f44" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 36 36 PM" src="https://github.com/user-attachments/assets/f2e62f14-702f-43b3-967a-ef58dee94608" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 36 57 PM" src="https://github.com/user-attachments/assets/9876d810-735a-4088-8f0f-ba70cf5e8df1" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 39 25 PM" src="https://github.com/user-attachments/assets/5df7fd8e-fd40-499b-a819-2a50dd71d51e" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 39 39 PM" src="https://github.com/user-attachments/assets/e237cab4-39ea-4174-806e-4ea6735f700a" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 39 50 PM" src="https://github.com/user-attachments/assets/3c2230a0-83d3-4fd6-923c-c337baba0a4c" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 40 00 PM" src="https://github.com/user-attachments/assets/a2482a1a-85b5-4dba-ba10-abc1219025de" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 40 17 PM" src="https://github.com/user-attachments/assets/d222dd28-be64-4707-aa93-f39877de3bcf" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 40 27 PM" src="https://github.com/user-attachments/assets/a7b189d8-8f41-4ff0-8cea-b855f99f550f" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 40 51 PM" src="https://github.com/user-attachments/assets/0011af46-e13a-4fb0-9860-0538a4f2cc66" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 41 10 PM" src="https://github.com/user-attachments/assets/410ad916-5b6e-439c-ae77-20ba276f23de" />
+<img width="915" alt="Screenshot 2025-01-19 at 10 41 17 PM" src="https://github.com/user-attachments/assets/a807c821-8aec-4fc7-849e-f623f67418b0" />
+
+
+
+
+
+
 
 
 
