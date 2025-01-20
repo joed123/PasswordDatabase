@@ -25,7 +25,7 @@ increased complexity demanded by the new standards would be difficult to remembe
 management team decided to develop an internal tool for generating passwords.
 
 
-A password can only be created if the user already exists.
+A password can only be created if the specified username already exists.
 
 Example run:
 
