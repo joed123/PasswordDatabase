@@ -1,58 +1,56 @@
 <html>
-
 <head>
-	<title>Edit People</title>
+    <title>Edit User</title>
 </head>
-
 <body>
     <div>
+        <!-- Display the current user's details in a table -->
         <table border="1" cellpadding="5"> 
-            <caption> Update User User: </caption>
-            {% if data %}
-                <thead>
-                    <tr>
-                        {% for key in Users[0].keys() %}
-
-                        <th scope="col" data-field="{{ key }}" data-filter-control="input">{{ key }}</th>
-                        
-                        {% endfor %} 
-                    </tr>
-
-                <tbody>
-                    <!-- Now, iterate through every item in data -->
-                    {% for item in data %}
-                    <tr>
-                        <!-- Then iterate through every key in the current item dictionary -->
-                        {% for key in item.keys() %}
-                        
-                        <!-- Create a <td> element with the value of that key in it -->
-                        <td>{{item[key]}}</td> {% endfor %} 
-                    </tr> 
-                    {% endfor %} 
-            {% endif %} 
+            <caption> Update User: </caption>
+            {% if Users %}
+            <thead>
+                <tr>
+                    {% for key in Users[0].keys() %}
+                    <th scope="col" data-field="{{ key }}" data-filter-control="input">{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in Users %}
+                <tr>
+                    {% for key in item.keys() %}
+                    <td>{{ item[key] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+            {% endif %}
         </table>
 
+        <!-- Form to edit the selected user's data -->
         <div id="edit">
-            <!-- form to edit data in Users-->
-            <form id="editPerson" action="/edit_login/{{data[0].user_id}}" method="post">
-                <legend><strong>Edit Person</strong></legend>
+            <form id="editPerson" action="/edit_Login/{{ Users[0]['user_id'] }}" method="POST">
+                <legend><strong>Edit User</strong></legend>
                 <fieldset>
-                    <input type="hidden" value="{{data[0].user_id}}" class="form-control" id="userID" name="userID" required>
+                    <!-- Hidden input to include user ID -->
+                    <input type="hidden" value="{{ Users[0]['user_id'] }}" id="userID" name="userID" required>
 
-                    <label for="make">email</label>
-                    <input type="text" value="{{data[0].email}}" class="form-control" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" palceholder="{{data[0].email}}"required>
+                    <!-- Email Field -->
+                    <label for="email">Email</label>
+                    <input type="email" value="{{ Users[0]['email'] }}" id="email" name="email"
+                           pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Enter new email" required>
 
-                    <label for="model">username</label>
-			            	<input type="text" class="form-control" id="username" name="username" pattern="[A-Za-z0-9]{1,}" placeholder="{{data[0].username}}" required>
-                    <label for="model">username</label>
-
-                        <!-- End of this for loop -->
-                        {% endfor %} 
-                    </select>	
-                        
+                    <!-- Username Field -->
+                    <label for="username">Username</label>
+                    <input type="text" value="{{ Users[0]['username'] }}" id="username" name="username"
+                           pattern="[A-Za-z0-9]{1,}" placeholder="Enter new username" required>
                 </fieldset>
-                <input type="submit" value="Edit Person" name="Edit_Person" class="btn btn-primary" style="margin:.5rem;">
-                <a href='/Logins'><input class="btn" type="button" value="cancel"></a>
-            </form>
 
+                <!-- Submit and Cancel Buttons -->
+                <input type="submit" value="Save Changes" class="btn btn-primary" style="margin:.5rem;">
+                <a href="/Logins"><input class="btn" type="button" value="Cancel"></a>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

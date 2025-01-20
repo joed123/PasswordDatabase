@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Generate Password</title>
+<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+<title>Generate Password</title>
 </head>
 <body>
-  <h1>Generate</h1>
-  [ <a href="Logins">Logins</a> | <a href="Categories">Categories</a> | <a href="History">History</a> ]
+  <header>
+    <h1>Generate</h1>
+    <nav>
+      <a href="/Logins">Logins</a> 
+      <a href="/Categories">Categories</a>
+    </nav>
+  </header>
   <p>&nbsp;</p>
   <div>
     <form action="/Generate" method="post">
@@ -22,11 +28,12 @@
           <td><input type="checkbox" name="lowercase" checked/></td>
           <td><input type="checkbox" name="digits" checked/></td>
           <td><input type="checkbox" name="specialchar" /></td>
-          <td><input type="input" name="length" value="8"/></td>
+          <td><input type="number" name="length" value="8" min="1" required/></td>
         </tr>
       </table>
       <input class="btn" type="submit" id="generate" value="Generate">
     </form>
-    <label>Password: {{ password_value }}</label>
+    <p><strong>Password:</strong> {{ password_value }}</p>
   </div>
 </body>
+</html>

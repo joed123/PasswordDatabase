@@ -1,0 +1,7 @@
+<!-- editCategory.j2 -->
+<form method="POST">
+    <label for="category_name">Category Name:</label>
+    <input type="text" name="category_name" value="{{ category['category_name'] }}" required>
+    <button type="submit">Save Changes</button>
+</form>
+<a href="{{ url_for('categories') }}">Back to Categories</a>

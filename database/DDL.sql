@@ -29,7 +29,7 @@ CREATE TABLE Passwords (
   password_id int NOT NULL AUTO_INCREMENT,
   password_value varchar(255),
   created_at DATE NOT NULL,
-  strength int(1) NOT NULL,
+  strength int(1) NOT NULL DEFAULT 1,
   FK_user_id int NOT NULL,
   PRIMARY KEY(password_id),
   FOREIGN KEY (FK_user_id) REFERENCES Users(user_id)

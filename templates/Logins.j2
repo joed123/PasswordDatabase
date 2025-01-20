@@ -1,100 +1,81 @@
-<h1>Logins</h1>
-[<a href="/">Generate Random Password</a> | <a href="Categories">Categories</a> | <a href="History">History</a>]
-<div id="browse" style="display: block">
-<p><strong>Browse All Logins</strong></p>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for username...">
-<table border="1" cellpadding="7" >
-<thead>
-<tr>
-    {% for key in Users[0].keys() %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+  <title>Logins</title>
+</head>
+<body>
+  <header>
+    <h1>Logins</h1>
+    <nav>
+      <a href="/">Generate Random Password</a>
+      <a href="/Categories">Categories</a>
+    </nav>
+  </header>
 
-    <th>{{ key }}</th>
+  <!-- Browse Section -->
+  <div id="browse">
+    <p><strong>Browse All Logins</strong></p>
+    <table border="1" cellpadding="7">
+      <thead>
+        <tr>
+          {% for key in Users[0].keys() %}
+            <th>{{ key }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in Users %}
+        <tr>
+          {% for key in person.keys() %}
+            <td>{{ person[key] }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
-    {% endfor %}
-    <th>Edit</th>
-    <th>Delete</th>
-</tr>
-<tbody>
+  <!-- Add Login Section -->
+  <div id="insert">
+    <form id="addLogin" action="/Logins" method="POST">
+      <legend><strong>Add Login</strong></legend>
+      <fieldset>
+        <label>Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter email" required>
 
-<!-- Now, iterate through every User -->
-{% for person in Users %}
-<tr>
-    <!-- Then iterate through every key in the current person dictionary -->
-    {% for key in person.keys() %}
+        <label>Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+      </fieldset>
+      <input type="submit" name="add_User" value="Add Login">
+      <input type="button" value="Cancel" onclick="window.location.href='/Logins'">
+    </form>
+  </div>
 
-    <!-- Create a <td> element with the value of that key in it -->
-    <td>{{person[key]}}</td>
-    {% endfor %}
-    <td><a href="/edit_Login/{{Users[0].user_id}}" method = "post">Edit</a></td>
-    <td><a href="/delete_Login/{{Users[0].user_id}}" method = "post">Delete</a></td>
-</tr>
-{% endfor %}
-</table>
-
-<p>&nbsp;</p>
-</div> <!-- browse -->
-<div id="insert" style="display: block">
-    <form id="addLogin" action="/Logins" method ="POST">
-        <legend><strong>Add Login</strong></legend>
-          <fieldset class="fields">
-
-            <label> Email </label> 
-            <input type="text" class="form-control" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="" required>
-
-            <label> Username </label> 
-            <input type="text" class="form-control" id="username" name="username" "[A-Za-z]{1,}" placeholder="" required>
-
-          </fieldset>
-
-          <input class = "btn" type="submit" name="add_User">
-          <input class="btn" type="button" value="Cancel">
-	</form> <!--add login-->
-</div><!-- insert -->
-
-<div id="edit" style="display: block">
-  <form id="editLogin">
-      <legend><strong>Update Login</strong></legend>
-          <fieldset class="fields">
-            <label>Current Username</label> <input type="text" placeholder="" readonly>
-            <label>Current Email</label> <input type="text"  placeholder="" readonly>
-            <label>New Username</label> <input type="text" name="username" value="RnBListener07">
-            <label>New Email</label> <input type="text"  name="email" value="NeoSoul@mail.com">
-    </fieldset>
-    <input class="btn" type="submit" id="UpdateSaveLogin" value="Save Update Login">
-          <input class="btn" type="button" value="Cancel" >
-  </form>
-
-
-
-
-
-
-</div><!-- update -->
-<div id="search" style="display: block">
-  <form id="updateLogin">
+  <!-- Search Login Section -->
+  <div id="search">
+    <form id="searchLogin" action="/search_Login" method="POST">
       <legend><strong>Search Login</strong></legend>
-          <fieldset class="fields">
-            <label>Username</label> <input type="text" value="BestProgrammer123" readonly>
-    </fieldset>
-    <input class="btn" type="submit" id="SearchLogin" value="Search">
-          <input class="btn" type="button" value="Cancel" >
-  </form>
+      <fieldset>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username to search" required>
+      </fieldset>
+      <input type="submit" id="SearchLogin" value="Search">
+      <input type="button" value="Cancel" onclick="window.location.href='/Logins'">
+    </form>
+  </div>
 
-</div><!-- search -->
-
-<div id="delete" style="display: block">
-  <form id="deleteLogin">
+  <!-- Delete Login Section -->
+  <div id="delete">
+    <form id="deleteLogin" action="/delete_Login" method="POST">
       <legend><strong>Delete Login</strong></legend>
-    <fieldset class="fields">
-          <p>Are you sure you wish to delete the following login?</p>
-          <label>ID:</label> 102
-          <label>Website: </label> www.myplate.gov
-            <label>Username: </label> WatermelonMango
-            <label>Email: </label> WhatEvenIsFruit@mail.com 
-    </fieldset>
-    <input class="btn" type="submit" id="Delete" value="Delete">
-          <input class="btn" type="button" value="Cancel" >
-  </form> 
-</div><!-- delete -->
+      <fieldset>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username to delete" required>
+      </fieldset>
+      <input type="submit" value="Delete">
+      <input type="button" value="Cancel" onclick="window.location.href='/Logins'">
+    </form>
+  </div>
 </body>
 </html>

@@ -1,0 +1,6 @@
+<!-- deleteCategory.j2 -->
+<p>Are you sure you want to delete the category "{{ category['category_name'] }}"?</p>
+<form method="POST">
+    <button type="submit">Delete</button>
+</form>
+<a href="{{ url_for('categories') }}">Cancel</a>
